@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="estilos/style.css" rel="stylesheet">
+  <title>Trabalho Segundo Bimestre</title>
+</head>
+
+<body>
+  <h1>Ordenação de Valores</h1>
+    <table>
+        <tr>
+            <th>Valor 1</th>
+            <th>Valor 2</th>
+            <th>Valor 3</th>
+            <th>Valor 4</th>
+            <th>Valor 5</th>
+        </tr>
+        <tr>
+            <td><input type="number" id="value1"></td>
+            <td><input type="number" id="value2"></td>
+            <td><input type="number" id="value3"></td>
+            <td><input type="number" id="value4"></td>
+            <td><input type="number" id="value5"></td>
+        </tr>
+    </table>
+    <br>
+    <button onclick="sortValues()">Ordenar</button>
+    <br><br>
+    <table id="resultTable">
+        <tr>
+            <th>Valores em Ordem Decrescente</th>
+        </tr>
+    </table>
+
+    <h1>Verificação de Triângulo</h1>
+    <table>
+        <tr>
+            <th>Lado X</th>
+            <th>Lado Y</th>
+            <th>Lado Z</th>
+        </tr>
+        <tr>
+            <td><input type="number" id="sideX"></td>
+            <td><input type="number" id="sideY"></td>
+            <td><input type="number" id="sideZ"></td>
+        </tr>
+    </table>
+    <br>
+    <button onclick="checkTriangle()">Verificar</button>
+    <br><br>
+    <table id="resultTable1">
+        <tr>
+            <th>Resultado</th>
+        </tr>
+    </table>
+
+    <h1>Decomposição de Valor em Notas</h1>
+    <table>
+        <tr>
+            <th>Valor em Reais</th>
+        </tr>
+        <tr>
+            <td><input type="number" id="value"></td>
+        </tr>
+    </table>
+    <br>
+    <button onclick="calculateNotes()">Calcular</button>
+    <br><br>
+    <table id="resultTable2">
+        <tr>
+            <th>Nota</th>
+            <th>Quantidade</th>
+        </tr>
+    </table>
+
+    <h1>Calculadora de Imposto de Transferência de Veículo</h1>
+    <table>
+        <tr>
+            <th>Ano de Fabricação</th>
+            <th>Valor de Tabela do Carro</th>
+        </tr>
+        <tr>
+            <td><input type="number" id="year"></td>
+            <td><input type="number" id="value"></td>
+        </tr>
+    </table>
+    <br>
+    <button onclick="calculateTax()">Calcular Imposto</button>
+    <br><br>
+    <table id="resultTable3">
+        <tr>
+            <th>Imposto a ser Pago</th>
+        </tr>
+    </table>
+
+    <h1>Calculadora de Aumento Salarial</h1>
+    <table>
+        <tr>
+            <th>Cargo</th>
+            <th>Salário</th>
+        </tr>
+        <tr>
+            <td><input type="text" id="cargo"></td>
+            <td><input type="number" id="salario"></td>
+        </tr>
+    </table>
+    <br>
+    <button onclick="calculateSalary()">Calcular Novo Salário</button>
+    <br><br>
+    <table id="resultTable4">
+        <tr>
+            <th>Salário Antigo</th>
+            <th>Novo Salário</th>
+            <th>Diferença</th>
+        </tr>
+    </table>
+
+    <h1>Cálculo de Crédito Especial</h1>
+    <table>
+        <tr>
+            <th>Saldo Médio</th>
+        </tr>
+        <tr>
+            <td><input type="number" id="saldoMedio"></td>
+        </tr>
+    </table>
+    <br>
+    <button onclick="calculateCredit()">Calcular Crédito Especial</button>
+    <br><br>
+    <table id="resultTable5">
+        <tr>
+            <th>Saldo Médio</th>
+            <th>Crédito Especial</th>
+        </tr>
+    </table>
+
+    <h1>Lanchonete - Cálculo de Valor do Pedido</h1>
+    <table>
+        <tr>
+            <th>Código</th>
+            <th>Produto</th>
+            <th>Preço (R$)</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Cachorro Quente</td>
+            <td>11,00</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Bauru</td>
+            <td>8,50</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Misto Quente</td>
+            <td>8,50</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Hambúrguer</td>
+            <td>9,00</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Cheeseburger</td>
+            <td>10,00</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Refrigerante</td>
+            <td>4,50</td>
+        </tr>
+    </table>
+    <br>
+    <label for="itemCode">Código do Item:</label>
+    <input type="number" id="itemCode"><br>
+    <label for="quantity">Quantidade:</label>
+    <input type="number" id="quantity"><br><br>
+    <button onclick="calculateTotal()">Calcular Valor do Pedido</button>
+    <br><br>
+    <table id="resultTable6">
+        <tr>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Valor Unitário (R$)</th>
+            <th>Valor Total (R$)</th>
+        </tr>
+    </table>
+
+    <h1>Cálculo do Peso Ideal</h1>
+    <table>
+        <tr>
+            <th>Altura (cm)</th>
+            <th>Sexo</th>
+        </tr>
+        <tr>
+            <td><input type="number" id="height"></td>
+            <td>
+                <select id="gender">
+                    <option value="male">Masculino</option>
+                    <option value="female">Feminino</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <button onclick="calculateWeightIdeal()">Calcular Peso Ideal</button>
+    <br><br>
+    <table id="resultTable7">
+        <tr>
+            <th>Sexo</th>
+            <th>Altura (cm)</th>
+            <th>Peso Ideal (kg)</th>
+        </tr>
+    </table>
+
+    <h1>Cálculo de Pagamento</h1>
+    <table>
+        <tr>
+            <th>Preço Normal</th>
+            <th>Condição de Pagamento</th>
+        </tr>
+        <tr>
+            <td><input type="number" id="price"></td>
+            <td>
+                <select id="paymentCondition">
+                    <option value="a">À vista em dinheiro ou cheque</option>
+                    <option value="b">À vista no cartão de crédito</option>
+                    <option value="c">Em duas vezes</option>
+                    <option value="d">Em duas vezes com juros</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <button onclick="calculatePayment()">Calcular Pagamento</button>
+    <br><br>
+    <table id="resultTable8">
+        <tr>
+            <th>Condição de Pagamento</th>
+            <th>Valor a Pagar</th>
+        </tr>
+    </table>
+
+    <h1>Cálculo de Salário do Professor</h1>
+    <table>
+        <tr>
+            <th>Nível do Professor</th>
+            <th>Quantidade de Horas/Aula</th>
+        </tr>
+        <tr>
+            <td>
+                <select id="professorLevel">
+                    <option value="1">Nível 1</option>
+                    <option value="2">Nível 2</option>
+                    <option value="3">Nível 3</option>
+                </select>
+            </td>
+            <td><input type="number" id="hoursPerWeek"></td>
+        </tr>
+    </table>
+    <br>
+    <button onclick="calculateSalary()">Calcular Salário</button>
+    <br><br>
+    <table id="resultTable9">
+        <tr>
+            <th>Nível do Professor</th>
+            <th>Quantidade de Horas/Aula</th>
+            <th>Salário</th>
+        </tr>
+    </table>
+
+</body>
+<script src="java/java.js"></script>
+
+</html>
