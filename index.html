@@ -7,271 +7,339 @@
 </head>
 
 <body>
-  <h1>Ordenação de Valores</h1>
-    <table>
-        <tr>
-            <th>Valor 1</th>
-            <th>Valor 2</th>
-            <th>Valor 3</th>
-            <th>Valor 4</th>
-            <th>Valor 5</th>
-        </tr>
-        <tr>
-            <td><input type="number" id="value1"></td>
-            <td><input type="number" id="value2"></td>
-            <td><input type="number" id="value3"></td>
-            <td><input type="number" id="value4"></td>
-            <td><input type="number" id="value5"></td>
-        </tr>
-    </table>
-    <br>
-    <button onclick="sortValues()">Ordenar</button>
-    <br><br>
-    <table id="resultTable">
-        <tr>
-            <th>Valores em Ordem Decrescente</th>
-        </tr>
-    </table>
+  <table class="table">
+    <tr>
+      <td class="cor1" align="center">
+        <h1><b>Cálculo de Área de Terreno</b></h1>
+      </td>
+    </tr>
+    <tr>
+      <td align="center"><b><label for="comprimento">Comprimento (em metros):</label>
+          <input type="number" id="comprimento" class="cor3"><br><br></b></td>
+    </tr>
+    <tr>
+      <td align="center"><b><label for="largura">Largura (em metros):</label>
+          <input type="number" id="largura" class="cor3"><br><br></b></td>
+    </tr>
+    <tr>
+      <td align="center"> <button onclick="calcularArea()" class="cor2"><b>Calcular Área</b></button>
+        <br><br>
+        <p id="resultado"></p>
+      </td>
+    </tr>
 
-    <h1>Verificação de Triângulo</h1>
-    <table>
-        <tr>
-            <th>Lado X</th>
-            <th>Lado Y</th>
-            <th>Lado Z</th>
-        </tr>
-        <tr>
-            <td><input type="number" id="sideX"></td>
-            <td><input type="number" id="sideY"></td>
-            <td><input type="number" id="sideZ"></td>
-        </tr>
-    </table>
-    <br>
-    <button onclick="checkTriangle()">Verificar</button>
-    <br><br>
-    <table id="resultTable1">
-        <tr>
-            <th>Resultado</th>
-        </tr>
-    </table>
 
-    <h1>Decomposição de Valor em Notas</h1>
-    <table>
-        <tr>
-            <th>Valor em Reais</th>
-        </tr>
-        <tr>
-            <td><input type="number" id="value"></td>
-        </tr>
-    </table>
-    <br>
-    <button onclick="calculateNotes()">Calcular</button>
-    <br><br>
-    <table id="resultTable2">
-        <tr>
-            <th>Nota</th>
-            <th>Quantidade</th>
-        </tr>
-    </table>
+  </table>
+  <br><br>
+  <table class="table2">
+    <tr>
+      <td align="center" class="cor4"><b>
+          <h1>Calculadora de Ferraduras</h1>
+        </b></td>
+    </tr>
+    <tr>
+      <td align="center"><b><label for="numeroCavalos">Número de Cavalos:</label>
+          <input type="number" id="numeroCavalos" min="0" value="0" class="cor5"><br><br></b></td>
+    </tr>
+    <tr>
+      <td align="center"> <button onclick="calcularFerraduras()" class="cor6"><b>Calcular</b></button>
+        <br><br>
+        <div id="resultado2"></div>
+      </td>
+    </tr>
 
-    <h1>Calculadora de Imposto de Transferência de Veículo</h1>
-    <table>
-        <tr>
-            <th>Ano de Fabricação</th>
-            <th>Valor de Tabela do Carro</th>
-        </tr>
-        <tr>
-            <td><input type="number" id="year"></td>
-            <td><input type="number" id="value"></td>
-        </tr>
-    </table>
-    <br>
-    <button onclick="calculateTax()">Calcular Imposto</button>
-    <br><br>
-    <table id="resultTable3">
-        <tr>
-            <th>Imposto a ser Pago</th>
-        </tr>
-    </table>
 
-    <h1>Calculadora de Aumento Salarial</h1>
-    <table>
-        <tr>
-            <th>Cargo</th>
-            <th>Salário</th>
-        </tr>
-        <tr>
-            <td><input type="text" id="cargo"></td>
-            <td><input type="number" id="salario"></td>
-        </tr>
-    </table>
-    <br>
-    <button onclick="calculateSalary()">Calcular Novo Salário</button>
-    <br><br>
-    <table id="resultTable4">
-        <tr>
-            <th>Salário Antigo</th>
-            <th>Novo Salário</th>
-            <th>Diferença</th>
-        </tr>
-    </table>
 
-    <h1>Cálculo de Crédito Especial</h1>
-    <table>
-        <tr>
-            <th>Saldo Médio</th>
-        </tr>
-        <tr>
-            <td><input type="number" id="saldoMedio"></td>
-        </tr>
-    </table>
-    <br>
-    <button onclick="calculateCredit()">Calcular Crédito Especial</button>
-    <br><br>
-    <table id="resultTable5">
-        <tr>
-            <th>Saldo Médio</th>
-            <th>Crédito Especial</th>
-        </tr>
-    </table>
 
-    <h1>Lanchonete - Cálculo de Valor do Pedido</h1>
-    <table>
-        <tr>
-            <th>Código</th>
-            <th>Produto</th>
-            <th>Preço (R$)</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Cachorro Quente</td>
-            <td>11,00</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Bauru</td>
-            <td>8,50</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Misto Quente</td>
-            <td>8,50</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Hambúrguer</td>
-            <td>9,00</td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>Cheeseburger</td>
-            <td>10,00</td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>Refrigerante</td>
-            <td>4,50</td>
-        </tr>
-    </table>
-    <br>
-    <label for="itemCode">Código do Item:</label>
-    <input type="number" id="itemCode"><br>
-    <label for="quantity">Quantidade:</label>
-    <input type="number" id="quantity"><br><br>
-    <button onclick="calculateTotal()">Calcular Valor do Pedido</button>
-    <br><br>
-    <table id="resultTable6">
-        <tr>
-            <th>Produto</th>
-            <th>Quantidade</th>
-            <th>Valor Unitário (R$)</th>
-            <th>Valor Total (R$)</th>
-        </tr>
-    </table>
 
-    <h1>Cálculo do Peso Ideal</h1>
-    <table>
-        <tr>
-            <th>Altura (cm)</th>
-            <th>Sexo</th>
-        </tr>
-        <tr>
-            <td><input type="number" id="height"></td>
-            <td>
-                <select id="gender">
-                    <option value="male">Masculino</option>
-                    <option value="female">Feminino</option>
-                </select>
-            </td>
-        </tr>
-    </table>
-    <br>
-    <button onclick="calculateWeightIdeal()">Calcular Peso Ideal</button>
-    <br><br>
-    <table id="resultTable7">
-        <tr>
-            <th>Sexo</th>
-            <th>Altura (cm)</th>
-            <th>Peso Ideal (kg)</th>
-        </tr>
-    </table>
+  </table>
+  <br><br>
+  <table class="table3">
+    <tr>
+      <td class="cor7">
+        <h1><b>Calculadora de Vendas - Hotpão</b></h1>
+      </td>
+    </tr>
+    <tr>
+      <td align="center"><b> <label for="quantidadePaes">Quantidade de pães:</label>
+          <input type="number" id="quantidadePaes" class="cor8"><br><br></b></td>
+    </tr>
+    <tr>
+      <td align="center"><b><label for="quantidadeBroas">Quantidade de broas:</label>
+          <input type="number" id="quantidadeBroas" class="cor8"><br><br></b></td>
+    </tr>
+    <tr>
+      <td align="center"><b><button onclick="calcularDados()" class="cor8"><b>Calcular</b></button>
+          <br><br>
+          <h2>Resultados:</h2>
+        </b></td>
+    </tr>
+    <tr>
+      <td><b>
+          <p align="center" id="valorTotal"></p>
+          <p align="center" id="valorPoupanca"></p>
+        </b></td>
+    </tr>
+  </table>
+  <br><br>
+  <table class="table4">
+    <tr>
+      <td class="cor9">
+        <h1><b>Calculadora de Dias de Vida</b></h1>
+      </td>
+    </tr>
+    <tr>
+      <td align="center"><b> <label for="nome">Nome:</label>
+          <input type="text" id="nome" class="cor10">
 
-    <h1>Cálculo de Pagamento</h1>
-    <table>
-        <tr>
-            <th>Preço Normal</th>
-            <th>Condição de Pagamento</th>
-        </tr>
-        <tr>
-            <td><input type="number" id="price"></td>
-            <td>
-                <select id="paymentCondition">
-                    <option value="a">À vista em dinheiro ou cheque</option>
-                    <option value="b">À vista no cartão de crédito</option>
-                    <option value="c">Em duas vezes</option>
-                    <option value="d">Em duas vezes com juros</option>
-                </select>
-            </td>
-        </tr>
-    </table>
-    <br>
-    <button onclick="calculatePayment()">Calcular Pagamento</button>
-    <br><br>
-    <table id="resultTable8">
-        <tr>
-            <th>Condição de Pagamento</th>
-            <th>Valor a Pagar</th>
-        </tr>
-    </table>
+          <br><br></b></td>
+    </tr>
+    <tr>
+      <td align="center"><b><label for="idade">Idade:</label>
+          <input type="text" id="idade" class="cor10"><br><br></b></td>
+    </tr>
+    <tr>
+      <td align="center"><b><button onclick="calcularDiasVida()" class="cor10">Calcular</button>
 
-    <h1>Cálculo de Salário do Professor</h1>
-    <table>
-        <tr>
-            <th>Nível do Professor</th>
-            <th>Quantidade de Horas/Aula</th>
-        </tr>
-        <tr>
-            <td>
-                <select id="professorLevel">
-                    <option value="1">Nível 1</option>
-                    <option value="2">Nível 2</option>
-                    <option value="3">Nível 3</option>
-                </select>
-            </td>
-            <td><input type="number" id="hoursPerWeek"></td>
-        </tr>
-    </table>
-    <br>
-    <button onclick="calculateSalary()">Calcular Salário</button>
-    <br><br>
-    <table id="resultTable9">
-        <tr>
-            <th>Nível do Professor</th>
-            <th>Quantidade de Horas/Aula</th>
-            <th>Salário</th>
-        </tr>
-    </table>
+          <br>
+        </b></td>
+    </tr>
+    <tr>
+      <td><b>
+          <p id="resultado3" align="center"></p>
+        </b></td>
+    </tr>
+  </table>
+  <br><br>
+  <table class="table5">
+    <tr>
+      <td align="center" class="cor11">
+        <h1><b>Calculadora de Gasolina</b></h1>
+      </td>
+    </tr>
+    <tr>
+      <td align="center"><b><label for="precoLitro">Preço do litro da gasolina:</label>
+          <input type="number" id="precoLitro" step="0.01" class="cor12"><br><br></b></td>
+    </tr>
+    <tr>
+      <td align="center"><b> <label for="valorPagamento">Valor do pagamento:</label>
+          <input type="number" id="valorPagamento" step="0.01" class="cor12"><br><br></b></td>
+    </tr>
+    <tr>
+      <td align="center"><b>
+          <button onclick="calcularLitros()" class="cor12">Calcular</button></b></td>
+    </tr>
+    <tr>
+      <td><b></b>
+        <p id="resultado4"></b></p>
+      </td>
+    </tr>
+  </table>
+  <br><br>
+  <table class="table6">
+    <tr>
+      <td align="center" class="cor13"><b>
+          <h1>Calculadora de Valor da Refeição</h1>
+        </b></td>
+    </tr>
+    <tr>
+      <td align="center"><b> <label for="peso">Peso do prato (em quilos):</label>
+          <input type="number" id="peso" step="0.01" class="cor14"><br><br></b></td>
+    </tr>
+    <tr>
+      <td align="center"><b><button onclick="calcularValor()" class="cor14">Calcular</button></b></td>
+    </tr>
+    <tr>
+      <td align="center"><b>
+          <p id="resultado5"></p>
+        </b></td>
+    </tr>
+  </table>
+  <br><br>
+  <table class="table7">
+    <tr>
+      <td class="cor15"><b>
+          <h1>Calculadora de Dias desde o Início do Ano</h1>
+        </b></td>
+    </tr>
+    <tr>
+      <td align="center"><b>
+          <label for="dia">Dia:</label>
+          <input type="number" id="dia" min="1" max="30" class="cor16"><br><br></b></td>
+    </tr>
+    <tr>
+      <td align="center"><b>
+          <label for="mes">Mês:</label>
+          <input type="number" id="mes" min="1" max="12" class="cor16"><br><br></b></td>
+    </tr>
+    <tr>
+      <td align="center"><b><button onclick="calcularDias()" class="cor16">Calcular</button></b></td>
+    </tr>
+    <tr>
+      <td align="center"><b>
+          <p id="resultado6"></p>
+        </b></td>
+    </tr>
+  </table>
+  <br><br>
+  <table class="table8">
+    <tr>
+      <td align="center" class="cor17"><b>
+          <h1>Calculadora de Valor Arrecadado</h1>
+        </b></td>
+    </tr>
+    <tr>
+      <td align="center"><b>
+          <label for="quantidade-pequenas">Quantidade de camisetas pequenas:</label>
+          <input type="number" id="quantidade-pequenas" min="0" class="cor18"><br><br>
+        </b></td>
+    </tr>
+    <tr>
+      <td align="center"><b><label for="quantidade-medias">Quantidade de camisetas médias:</label>
+          <input type="number" id="quantidade-medias" min="0" class="cor18"><br><br></b></td>
+    </tr>
+    <tr>
+      <td align="center"><b>
+          <label for="quantidade-grandes">Quantidade de camisetas grandes:</label>
+          <input type="number" id="quantidade-grandes" min="0" class="cor18"><br><br></b></td>
+    </tr>
+    <tr>
+      <td align="center"><b> <button onclick="calcularValorArrecadado()" class="cor18">Calcular</button>
 
+          <p id="resultado7"></p>
+        </b></td>
+    </tr>
+  </table>
+  <br><br>
+  <table class="table9">
+    <tr>
+      <td align="center" class="cor19"><b>
+          <h1>Calculadora de Distância entre Pontos</h1>
+        </b></td>
+    </tr>
+    <tr>
+      <td align="center"><b><label for="x1">Coordenada x do ponto 1:</label>
+          <input type="number" id="x1" class="cor20"><br><br></b></td>
+    </tr>
+    <tr>
+      <td align="center"><b> <label for="y1">Coordenada y do ponto 1:</label>
+          <input type="number" id="y1" class="cor20"><br><br>
+        </b></td>
+    </tr>
+    <tr>
+      <td align="center"><b> <label for="x2">Coordenada x do ponto 2:</label>
+          <input type="number" id="x2" class="cor20"><br><br></b></td>
+    </tr>
+    <tr>
+      <td align="center"><b> <label for="y2">Coordenada y do ponto 2:</label>
+          <input type="number" id="y2" class="cor20"><br><br></b></td>
+    </tr>
+    <tr>
+      <td align="center"><b><button onclick="calcularDistancia()" class="cor20">Calcular</button>
+
+          <p id="resultado8"></p>
+        </b></td>
+    </tr>
+  </table>
+  <br><br>
+  <table class="table10">
+    <tr>
+      <td align="center" class="cor21"><b>
+          <h1>Conversor de Tempo sem Acidentes</h1>
+        </b></td>
+    </tr>
+    <tr>
+      <td align="center"><b>
+          <label for="dias">Quantidade de dias sem acidentes:</label>
+          <input type="number" id="dias" min="0" class="cor22"><br><br></b></td>
+    </tr>
+    <tr>
+      <td align="center"><b>
+          <button onclick="converterTempo()" class="cor22">Converter</button>
+
+          <p id="resultado9"></p>
+        </b></td>
+    </tr>
+  </table>
+  <br><br>
+  <table class="table13">
+    <tr>
+      <td align="center" class="cor27"><b>
+          <h1>Calculadora de Salário</h1>
+        </b></td>
+    </tr>
+    <tr>
+      <td align="center"><b> <label for="salario">Salário:</label>
+          <input type="number" id="salario" step="any" class="cor28"><br><br></b></td>
+    </tr>
+    <tr>
+      <td align="center"><b> <button onclick="calcularSalario()" class="cor28">Calcular</button>
+
+          <p id="salarioInicial"></p>
+          <p id="salarioComAumento"></p>
+          <p id="salarioFinal"></p>
+        </b></td>
+    </tr>
+  </table>
+  <br><br>
+  <table class="table11">
+    <tr>
+      <td align="center" class="cor23"><b>
+          <h1>Imprimir Número por Dígitos</h1>
+        </b></td>
+    </tr>
+    <tr>
+      <td align="center"><b><label for="numero">Número inteiro (até 3 dígitos):</label>
+          <input type="number" id="numero" class="cor24"><br><br></b></td>
+    </tr>
+    <tr>
+      <td align="center"><b> <button onclick="imprimirNumeros()" class="cor24">Imprimir</button>
+
+          <p id="resultado10"></p>
+        </b></td>
+    </tr>
+  </table>
+  <br><br>
+  <table class="table12">
+    <tr>
+      <td align="center" class="cor25"><b>
+          <h1>Calculadora de Área de Pizza</h1>
+        </b></td>
+    </tr>
+    <tr>
+      <td align="center"><b>
+          <label for="raio">Raio da pizza:</label>
+          <input type="number" id="raio" step="0.01" class="cor26">
+          <br><br></b></td>
+    </tr>
+    <tr>
+      <td align="center"><b> <button onclick="calcularArea1()" class="cor26">Calcular</button>
+
+          <p id="resultado23"></p>
+        </b></td>
+    </tr>
+  </table>
+  <br><br>
+  <table class="table14">
+    <tr>
+      <td align="center" class="cor29"><b>
+          <h1>Rachar a Conta do Bar</h1>
+        </b></td>
+    </tr>
+    <tr>
+      <td align="center"><b><label for="valor-total">Valor total da conta:</label>
+          <input type="number" id="valor-total" step="0.01" class="cor30"><br><br></b></td>
+    </tr>
+    <tr>
+      <td align="center"><b> <button onclick="racharConta()" class="cor30">Calcular</button>
+
+          <p id="resultado-carlos"></p>
+          <p id="resultado-andre"></p>
+          <p id="resultado-felipe"></p>
+        </b></td>
+    </tr>
+  </table>
+  <br><br>
 </body>
 <script src="java/java.js"></script>
 
